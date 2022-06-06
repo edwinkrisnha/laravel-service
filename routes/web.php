@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EmployeeControllerWithService;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/employee', EmployeeController::class);
+// Route::resource('/employee', EmployeeController::class);
+
+Route::resource('/employee', EmployeeControllerWithService::class);
